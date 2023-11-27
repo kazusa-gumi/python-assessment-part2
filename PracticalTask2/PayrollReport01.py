@@ -1,3 +1,4 @@
+# Payrollreport01.py
 def read_employee_data(filename):
     employees = []
     with open(filename, 'r') as file:
@@ -8,7 +9,6 @@ def read_employee_data(filename):
                 position_line = next(file).strip()
                 salary_line = next(file).strip()
             except StopIteration:
-                # ファイルの終わりに達した
                 break
             
             employee = {
@@ -63,7 +63,7 @@ def write_employees_report(employees, filename):
         for employee in employees:
             file.write(f"{employee['id']} {employee['name']} {employee['position']} ${employee['salary']:.2f}\n")
 
-# 主な実行関数
+
 def main():
     # 'employees.txt' ファイルのフルパスを指定
     employees_file_path = './Practicaltask2/Employees.txt'

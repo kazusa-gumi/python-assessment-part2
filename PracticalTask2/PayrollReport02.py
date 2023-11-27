@@ -1,4 +1,4 @@
-### PayrollReport02.py ファイル
+# Payrollreport02.py
 import csv
 
 def read_employees_from_csv(filename):
