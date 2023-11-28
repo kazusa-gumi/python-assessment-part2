@@ -64,23 +64,18 @@ def write_employees_report(employees, filename):
             file.write(f"{employee['id']} {employee['name']} {employee['position']} ${employee['salary']:.2f}\n")
 
 
+def print_employees_report(employees):
+    for employee in employees:
+        print(f"{employee['id']} {employee['name']} {employee['position']} ${employee['salary']:.2f}")
+
 def main():
-    # 'employees.txt' ファイルのフルパスを指定
     employees_file_path = './Practicaltask2/Employees.txt'
-    # 従業員情報をファイルから読み込む
     employees = read_employee_data(employees_file_path)
-    # 給与情報を計算
     payroll_data = calculate_salaries(employees)
-    # 給与報告書をファイルに書き込む
     payroll_report_path = './Practicaltask2/PayrollReport.txt'
     write_payroll_report(payroll_data, payroll_report_path)
-    # 整形された従業員情報をファイルに書き込む
-    employees_report_path = './Practicaltask2/EmployeesReport.txt'
-    write_employees_report(employees, employees_report_path)
+    print_employees_report(employees)
 
 if __name__ == '__main__':
     main()
 
-
-if __name__ == '__main__':
-    main()

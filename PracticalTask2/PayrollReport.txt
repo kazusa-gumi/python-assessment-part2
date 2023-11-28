@@ -1,0 +1,8 @@
+Total payroll: $105886.25
+Number of payroll: 36
+Average payroll: $2941.28
+
+Total pay for:
+Total salaries for Manager: $21344.34
+Total salaries for Sales: $54530.51
+Total salaries for Administration: $30011.40
